@@ -103,7 +103,7 @@ DragonBallApp permite a los usuarios:
 
 ### 3. Crear el Código Detrás de la Página (MainPage.xaml.cs):
 
-```xml
+```cs
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -190,7 +190,7 @@ namespace DragonBallApp
 
 ## 4. Crear el Servicio de Dragon Ball (DragonBallService.cs)
 
-```xml
+```cs
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
