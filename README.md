@@ -1,4 +1,4 @@
-# 🌟 DragonBallApp 🌟 **Xamarin**, **.NET MAUI**, **C#** y **XAML** 🚀
+# 🐉 DragonBallApp 🔮 🌟 **Xamarin**, **.NET MAUI**, **C#** y **XAML** 🚀
 
 Bienvenido a DragonBallApp, una aplicación web interactiva que muestra información sobre los personajes y planetas del universo Dragon Ball. Utilizando la API pública de Dragon Ball, esta aplicación ofrece una interfaz amigable para explorar y conocer más sobre este fascinante mundo.
 
