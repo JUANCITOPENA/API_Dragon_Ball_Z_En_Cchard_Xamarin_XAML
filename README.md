@@ -266,14 +266,39 @@ public class Planet
 }
 ```
 
-### Explicación de Archivos:
+## Explicación de Archivos
 
-MainPage.xaml: Define la interfaz de usuario de la página principal.
-MainPage.xaml.cs: Contiene la lógica de la página principal, incluyendo la carga de personajes y planetas, y el manejo de eventos.
-DragonBallService.cs: Servicio para interactuar con la API de Dragon Ball y obtener datos de personajes y planetas.
-Character.cs y Planet.cs: Modelos que representan la estructura de los datos de personajes y planetas.
+### `MainPage.xaml`
 
+Este archivo define la interfaz de usuario de la página principal de la aplicación. En él se diseñan los componentes visuales que los usuarios verán, como los botones para ver personajes y planetas, el campo de búsqueda y el área donde se mostrarán los resultados. La estructura del diseño en `XAML` permite una rápida visualización y ajuste del layout para adaptarse a diferentes tamaños de pantalla, ideal para aplicaciones móviles y de escritorio.
 
-### Conclusión:
+### `MainPage.xaml.cs`
 
-DragonBallApp es una aplicación interactiva y educativa que permite a los fanáticos de Dragon Ball explorar información detallada sobre sus personajes y planetas favoritos. Con una interfaz fácil de usar y datos actualizados desde una API pública, esta aplicación ofrece una experiencia enriquecedora y divertida para todos los usuarios.
+Aquí es donde se encuentra la lógica detrás de la página principal. Este archivo maneja las interacciones del usuario y el flujo de datos. Incluye métodos para cargar personajes y planetas desde la API, manejar los eventos de clic en los botones, y filtrar los resultados según el texto de búsqueda. La separación de la lógica del diseño permite un mantenimiento más sencillo y una mejor organización del código.
+
+### `DragonBallService.cs`
+
+Este archivo contiene el servicio que interactúa con la API de Dragon Ball. Aquí se definen los métodos que realizan solicitudes HTTP para obtener datos de personajes y planetas. Usando este servicio, la aplicación puede acceder a datos actualizados y en tiempo real, lo que enriquece la experiencia del usuario al proporcionar información precisa y relevante sobre el universo de Dragon Ball.
+
+### `Character.cs` y `Planet.cs`:
+
+Estos archivos definen los modelos de datos para personajes y planetas. Cada modelo representa la estructura de los datos que se recibirán de la API, incluyendo propiedades como nombres, imágenes y descripciones. Tener modelos bien definidos facilita el manejo y la visualización de los datos en la aplicación, asegurando que la información se muestre de manera consistente y correcta.
+
+## Conclusión:
+
+DragonBallApp no solo es una aplicación interactiva y educativa que permite a los fanáticos de Dragon Ball explorar información detallada sobre sus personajes y planetas favoritos, sino que también es una excelente oportunidad para aprender y practicar habilidades de programación. Al trabajar en este proyecto, tanto los entusiastas del anime como los programadores pueden:
+
+- **Mejorar su comprensión de la Programación Orientada a Objetos (OOP)**: Al estructurar el código en clases y métodos, aprendemos a organizar y gestionar mejor la lógica y los datos.
+- **Practicar la Programación Asíncrona**: Usar `async` y `await` para manejar solicitudes HTTP sin bloquear la interfaz de usuario mejora nuestra habilidad para trabajar con operaciones asíncronas en aplicaciones reales.
+- **Diseñar Interfaces de Usuario**: Crear interfaces atractivas y funcionales en `XAML` o HTML/CSS ayuda a desarrollar habilidades en diseño y usabilidad.
+
+Este proyecto es una forma divertida y educativa de aplicar conceptos de programación mientras se explora un universo tan querido como el de Dragon Ball Z. 
+
+Además, te invito a explorar dos proyectos adicionales:
+
+1. **[Proyecto HTML, CSS y JS Puro](#)**: Para una experiencia básica y fundamental en desarrollo web.
+2. **[Proyecto con React](#)**: Para una versión más moderna y dinámica usando React.
+
+¡No olvides compartir estos proyectos en tus redes sociales y darle una estrellita en el repositorio para apoyar el desarrollo de más contenido! 🌟
+
+Gracias por tu interés y por ser parte de esta comunidad de entusiastas de Dragon Ball y programadores. ¡Que disfrutes desarrollando y aprendiendo!
