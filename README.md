@@ -308,4 +308,48 @@ Además, te invito a explorar dos proyectos adicionales:
 
 ¡No olvides compartir estos proyectos en tus redes sociales y darle una estrellita en el repositorio para apoyar el desarrollo de más contenido! 🌟
 
-Gracias por tu interés y por ser parte de esta comunidad de entusiastas de Dragon Ball y programadores. ¡Que disfrutes desarrollando y aprendiendo!
+## 📜 Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+
+## 🚀 Áreas de Mejora
+
+Aunque este proyecto ya es funcional, hay varias áreas en las que se podría mejorar:
+
+1. 🛠️ **Manejo de Errores**: Implementar un manejo de errores más robusto para las llamadas a la API.
+2. ⏳ **Estados de Carga**: Añadir indicadores de carga más detallados mientras se obtienen los datos.
+3. 🚪 **Cierre de Modal**: Agregar un botón de cierre explícito a los modales para mejorar la experiencia del usuario.
+4. 📱 **Diseño Responsivo**: Asegurar que todos los componentes sean completamente responsivos en diferentes tamaños de pantalla.
+5. 🔄 **Duplicación de Código**: Considerar la creación de un servicio de API compartido para reducir la duplicación en `Characters.js` y `Planets.js`.
+6. ✅ **Comprobación de Tipos**: Considerar añadir PropTypes o TypeScript para una mejor comprobación de tipos y prevención de errores.
+7. 🌐 **Internacionalización**: Implementar soporte para múltiples idiomas para hacer la aplicación accesible a una audiencia más amplia.
+8. 🎨 **Temas**: Añadir soporte para temas claro y oscuro para mejorar la experiencia del usuario en diferentes condiciones de iluminación.
+
+## 📚 Recursos Adicionales
+
+- [Documentación de React](https://reactjs.org/docs/getting-started.html)
+- [Documentación de React Router](https://reactrouter.com/web/guides/quick-start)
+- [Documentación de Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+- [Dragon Ball API Documentation](https://dragonball-api.com/documentation) (ficticia, reemplazar con la documentación real si existe)
+
+## 📞 Contacto
+
+Si tienes alguna pregunta o sugerencia, no dudes en abrir un issue o contactar al mantenedor del proyecto:
+
+👤 [JUANCITO PEÑA](https://github.com/JUANCITOPENA)
+
+No olvides suscribirte, darle like, y compartir este video para ayudarnos a seguir creando contenido como este. ¡Vamos a comenzar! 😊📡
+
+DragonBallApp 🚀📱🌟, Xamarin #DesarrolloMóvil, #XamarinForms, .NET MAUI #DesarrolloCrossPlatform, #AplicacionesMóviles, C# #ProgramaciónOrientadaAObjetos, #LenguajeDeProgramación, XAML #DiseñoDeInterfaz ,#DesarrolloDeUI, API pública de Dragon Ball, #IntegraciónDeAPI #DatosActualizados, HttpClient #ComunicaciónHTTP #SolicitudesAsíncronas, Newtonsoft.Json #SerializaciónJSON, #Deserialización, Programación Asíncrona #AsyncAwait, #ExperienciaDeUsuario, ArquitecturaOrientadaAObjetos, #EstructuraDeCódigo #Mantenibilidad.
+
+1. 🎬 **YouTube**: [@JuancitoPenaV](https://www.youtube.com/@JuancitoPenaV)
+2. 👨‍💼 **LinkedIn**: [Juancito Peña](https://www.linkedin.com/in/juancitope%C3%B1a/)
+3. 📷 **Instagram**: [@juancito.pena.v](https://www.instagram.com/juancito.pena.v/)
+4. 📑 **Facebook**: [Juancito Peña V](https://www.facebook.com/juancito.p.v)
+5. 🐦 **Twitter**: [@JuancitoPenaV](https://twitter.com/JuancitoPenaV)
+6. 📰 **Blog**: [Adviser Tecnology](https://advisertecnology.com/)
+
+---
+
+🐉 ¡Disfruta explorando el universo de Dragon Ball con nuestra aplicación! 🌟
+
