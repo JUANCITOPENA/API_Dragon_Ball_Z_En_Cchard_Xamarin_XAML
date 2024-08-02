@@ -10,6 +10,12 @@ DragonBallApp permite a los usuarios:
 - 🖼️ Disfrutar de imágenes de alta calidad.
 - 📱 Navegar fácilmente con una interfaz responsiva.
 
+| Imagen 1 | Imagen 2 | Imagen 3 | Imagen 4 | Imagen 5 |
+|:---------:|:---------:|:---------:|
+| ![Imagen 1](Image/1.png) | ![Imagen 2](Image/2.png) | ![Imagen 3](Image/3.png) |  ![Imagen 4](Image/4.png) |  ![Imagen 4](Image/5.png) |
+| Portada 1 | Portada 2 | Portada 3 | Portada 4 | Portada 4 |
+
+
 ## Tecnologías Utilizadas
 
 - **Xamarin.Forms**: Para crear la interfaz de usuario multiplataforma.
