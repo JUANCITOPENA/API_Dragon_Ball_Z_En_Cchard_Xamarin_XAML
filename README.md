@@ -104,7 +104,6 @@ DragonBallApp permite a los usuarios:
 ### 3. Crear el Código Detrás de la Página (MainPage.xaml.cs):
 
 ```xml
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -187,13 +186,11 @@ namespace DragonBallApp
         }
     }
 }
-
 ```
 
 ## 4. Crear el Servicio de Dragon Ball (DragonBallService.cs)
 
 ```xml
-
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -267,7 +264,6 @@ public class Planet
     public string Description { get; set; }
     public string Image { get; set; }
 }
-
 ```
 
 ### Explicación de Archivos:
