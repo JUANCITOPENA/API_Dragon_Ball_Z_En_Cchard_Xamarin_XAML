@@ -12,7 +12,7 @@ DragonBallApp permite a los usuarios:
 
 | Imagen 1 | Imagen 2 | Imagen 3 | Imagen 4 | Imagen 5 |
 |:---------:|:---------:|:---------:|
-| ![Imagen 1](Image/1.png) | ![Imagen 2](Image/2.png) | ![Imagen 3](Image/3.png) |  ![Imagen 4](Image/4.png) |  ![Imagen 4](Image/5.png) |
+| ![Imagen 1](Image/DMZ1.png) | ![Imagen 2](Image/DMZ2.png) | ![Imagen 3](Image/DMZ3.png) |  ![Imagen 4](Image/DMZ4.png) |  ![Imagen 4](Image/DMZ5.png) |
 | Portada 1 | Portada 2 | Portada 3 | Portada 4 | Portada 4 |
 
 
