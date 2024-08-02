@@ -92,9 +92,10 @@ DragonBallApp permite a los usuarios:
 </ContentPage>
 ```
 
-3. Crear el Código Detrás de la Página (MainPage.xaml.cs)
+### 3. Crear el Código Detrás de la Página (MainPage.xaml.cs):
 
 ```xml
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -177,9 +178,13 @@ namespace DragonBallApp
         }
     }
 }
-4. Crear el Servicio de Dragon Ball (DragonBallService.cs)
-csharp
-Copiar código
+
+```
+
+## 4. Crear el Servicio de Dragon Ball (DragonBallService.cs)
+
+```xml
+
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -253,10 +258,17 @@ public class Planet
     public string Description { get; set; }
     public string Image { get; set; }
 }
-Explicación de Archivos
+
+```
+
+### Explicación de Archivos:
+
 MainPage.xaml: Define la interfaz de usuario de la página principal.
 MainPage.xaml.cs: Contiene la lógica de la página principal, incluyendo la carga de personajes y planetas, y el manejo de eventos.
 DragonBallService.cs: Servicio para interactuar con la API de Dragon Ball y obtener datos de personajes y planetas.
 Character.cs y Planet.cs: Modelos que representan la estructura de los datos de personajes y planetas.
-Conclusión
+
+
+### Conclusión:
+
 DragonBallApp es una aplicación interactiva y educativa que permite a los fanáticos de Dragon Ball explorar información detallada sobre sus personajes y planetas favoritos. Con una interfaz fácil de usar y datos actualizados desde una API pública, esta aplicación ofrece una experiencia enriquecedora y divertida para todos los usuarios.
