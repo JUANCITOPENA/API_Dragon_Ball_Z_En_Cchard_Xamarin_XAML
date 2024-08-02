@@ -296,8 +296,8 @@ Este proyecto es una forma divertida y educativa de aplicar conceptos de program
 
 Además, te invito a explorar dos proyectos adicionales:
 
-1. **[Proyecto HTML, CSS y JS Puro](#)**: Para una experiencia básica y fundamental en desarrollo web.
-2. **[Proyecto con React](#)**: Para una versión más moderna y dinámica usando React.
+1. **[Proyecto HTML, CSS y JS Puro](#)**: URL: https://github.com/JUANCITOPENA/DRAGON_BALL_Z_V:  Para una experiencia básica y fundamental en desarrollo web.
+2. **[Proyecto con React](#)**: URL: https://github.com/JUANCITOPENA/dragon-ball-project_react :  Para una versión más moderna y dinámica usando React.
 
 ¡No olvides compartir estos proyectos en tus redes sociales y darle una estrellita en el repositorio para apoyar el desarrollo de más contenido! 🌟
 
