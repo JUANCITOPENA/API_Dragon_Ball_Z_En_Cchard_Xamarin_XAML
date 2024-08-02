@@ -2,11 +2,11 @@
 
 Bienvenido a DragonBallApp, una aplicación móvil interactiva que te sumerge en el universo de Dragon Ball utilizando Xamarin, .NET MAUI, C# y XAML. Esta app móvil está diseñada para mostrar información detallada sobre los personajes y planetas de Dragon Ball, proporcionando una experiencia enriquecedora y fácil de usar.
 
-La aplicación hace uso de la API pública de Dragon Ball para obtener datos actualizados, empleando prácticas de programación asíncrona con async y await para realizar solicitudes HTTP sin bloquear la interfaz de usuario. Utilizamos HttpClient para gestionar las peticiones a la API, lo que permite una comunicación eficiente y fluida con el servidor.
+La aplicación hace uso de la API pública de Dragon Ball para obtener datos actualizados. Emplea HttpClient para gestionar las peticiones a la API, lo que permite una comunicación eficiente y fluida con el servidor. Para la serialización y deserialización de datos JSON, DragonBallApp utiliza la librería Newtonsoft.Json.
 
-Con una interfaz diseñada en XAML y la lógica implementada en C#, DragonBallApp combina la potencia de Xamarin y .NET MAUI para ofrecer una experiencia móvil moderna y responsiva. A través de una arquitectura orientada a objetos, la aplicación gestiona los datos de personajes y planetas, permitiéndote explorar este fascinante mundo con facilidad y rapidez.
+Implementa prácticas de programación asíncrona con async y await para realizar solicitudes HTTP sin bloquear la interfaz de usuario. La arquitectura orientada a objetos facilita la gestión de los datos de personajes y planetas, asegurando una estructura de código clara y mantenible.
 
-¡Explora el universo de Dragon Ball con DragonBallApp y disfruta de la programación móvil en acción!
+Con una interfaz diseñada en XAML y la lógica implementada en C#, DragonBallApp combina la potencia de Xamarin y .NET MAUI para ofrecer una experiencia móvil moderna y responsiva. ¡Explora el universo de Dragon Ball con DragonBallApp y disfruta de la programación móvil en acción!
 
 ## Descripción
 
