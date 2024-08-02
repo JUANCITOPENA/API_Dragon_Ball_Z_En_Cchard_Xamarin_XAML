@@ -90,9 +90,11 @@ DragonBallApp permite a los usuarios:
         </CollectionView>
     </StackLayout>
 </ContentPage>
+```
+
 3. Crear el Código Detrás de la Página (MainPage.xaml.cs)
-csharp
-Copiar código
+
+```xml
 using System;
 using System.Collections.Generic;
 using System.Linq;
