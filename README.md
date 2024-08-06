@@ -107,6 +107,24 @@ Con una interfaz diseñada en XAML y la lógica implementada en C#, DragonBallAp
     </StackLayout>
 </ContentPage>
 ```
+# Proceso de Serialización y Deserialización con Newtonsoft.Json
+
+Este proyecto demuestra cómo usar la biblioteca `Newtonsoft.Json` para la serialización y deserialización de datos JSON en aplicaciones C#.
+
+## Instalación
+
+Para instalar `Newtonsoft.Json` utilizando el Administrador de Paquetes NuGet en Visual Studio, sigue estos pasos:
+
+1. Abre tu solución en Visual Studio.
+2. Haz clic derecho en la solución del proyecto en el Explorador de Soluciones.
+3. Selecciona "Administrar paquetes NuGet...".
+4. En la pestaña "Examinar", busca `Newtonsoft.Json`.
+5. Selecciona `Newtonsoft.Json` en los resultados de búsqueda y haz clic en "Instalar".
+6. Asegúrate de que la versión sea la 13.0.1 o superior y sigue las instrucciones para completar la instalación.
+
+![](PAQUETES1.png)
+
+![](PAQUETES.png)
 
 ### 3. Crear el Código Detrás de la Página (MainPage.xaml.cs):
 
