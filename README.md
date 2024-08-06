@@ -76,20 +76,56 @@ Con una interfaz diseñada en XAML y la lógica implementada en C#, DragonBallAp
              x:Class="DragonBallApp.MainPage">
 
     <StackLayout Padding="10">
-        <Frame Padding="5" Margin="5" CornerRadius="15" HasShadow="True" BorderColor="LightGray" BackgroundColor="White">
-            <Label Text="🐲 Dragon Ball Characters 🌍" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" Padding="10"/>
+        <Frame Padding="5"
+       Margin="5"
+       CornerRadius="15"
+       HasShadow="True"
+       BorderColor="LightGray"
+       BackgroundColor="White">
+            <Label Text="🐲 Dragon Ball Characters 🌍"
+           FontSize="24"
+           FontAttributes="Bold"
+           HorizontalOptions="Center"
+           VerticalOptions="Center"
+           TextColor="Black"
+           Padding="10"/>
         </Frame>
 
         <!-- Menu -->
-        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20" Padding="5">
-            <Button Text="🦸‍♂️ Personajes" Clicked="OnCharactersClicked" BackgroundColor="#4CAF50" TextColor="White" FontSize="16" CornerRadius="5" HeightRequest="70" WidthRequest="150" BorderColor="#388E3C" BorderWidth="2"/>
-            <Button Text="🌍 Planetas" Clicked="OnPlanetsClicked" BackgroundColor="#2196F3" TextColor="White" FontSize="16" CornerRadius="5" HeightRequest="60" WidthRequest="130" BorderColor="#1976D2" BorderWidth="2"/>
+        <StackLayout Orientation="Horizontal"
+             HorizontalOptions="CenterAndExpand"
+             Spacing="20"
+             Padding="5">
+
+            <Button Text="🦸‍♂️ Personajes"
+            Clicked="OnCharactersClicked"
+            BackgroundColor="#4CAF50"
+            TextColor="White"
+            FontSize="16"
+            CornerRadius="5"
+            HeightRequest="70"
+            WidthRequest="150"
+            BorderColor="#388E3C"
+            BorderWidth="2"/>
+
+            <Button Text="🌍 Planetas"
+            Clicked="OnPlanetsClicked"
+            BackgroundColor="#2196F3"
+            TextColor="White"
+            FontSize="16"
+            CornerRadius="5"
+            HeightRequest="60"
+            WidthRequest="130"
+            BorderColor="#1976D2"
+            BorderWidth="2"/>
+
         </StackLayout>
+
 
         <!-- Barra de búsqueda y botón limpiar -->
         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="1" Margin="20">
             <SearchBar x:Name="searchBar" Placeholder="Buscar..." TextChanged="OnSearchTextChanged" WidthRequest="250" />
-            <Button Text="Limpiar" Clicked="OnClearClicked" BackgroundColor="#fbc531" />
+            <Button Text="cLEAR" Clicked="OnClearClicked" BackgroundColor="#fbc531" />
         </StackLayout>
 
         <!-- Lista de tarjetas -->
