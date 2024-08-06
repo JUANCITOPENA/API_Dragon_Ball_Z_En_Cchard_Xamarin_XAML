@@ -38,6 +38,7 @@ Con una interfaz diseñada en XAML y la lógica implementada en C#, DragonBallAp
 
 ## API Utilizada
 
+- **Documentation Dragon Ball API**: [https://web.dragonball-api.com/documentation](https://web.dragonball-api.com/documentation)
 - **Dragon Ball API**: [https://dragonball-api.com](https://dragonball-api.com)
   - **Endpoint de personajes**: `https://dragonball-api.com/api/characters?limit=1000`
   - **Endpoint de planetas**: `https://dragonball-api.com/api/planets?limit=1000`
