@@ -251,6 +251,39 @@ namespace DragonBallApp
     }
 }
 ```
+## AGREGAR EN EL App.xaml.cs eta linea  ( MainPage = new MainPage(); =que quede como esta;
+
+```cs
+using System;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace DragonBallApp
+{
+    public partial class App : Application
+    {
+        public App()
+        {
+            InitializeComponent();
+
+            MainPage = new MainPage();
+        }
+
+        protected override void OnStart()
+        {
+        }
+
+        protected override void OnSleep()
+        {
+        }
+
+        protected override void OnResume()
+        {
+        }
+    }
+}
+
+```
 
 ## 4. Crear el Servicio de Dragon Ball (DragonBallService.cs)
 
