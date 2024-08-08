@@ -363,6 +363,264 @@ public class Planet
 }
 ```
 
+
+# 🐉 DragonBallApp 🔮 🌟 Para Usarlo con *.NET MAUI**, **C#** y **XAML** -SOLO TIENE UNOS LIGEROS CAMBIOS AQUI LOS CODIGO: 🚀:
+
+### El código de consumo de API y manejo de datos es prácticamente el mismo; la mayor diferencia al cambiar de Xamarin a MAUI radica en cómo organizas el proyecto y manejas las dependencias y la interfaz de usuario, no en el propio código de la lógica de negocio.
+
+
+### 2. Crear la Página Principal (`MainPage.xaml`)
+
+```cs
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DragonBallAppMaui.MainPage">
+
+    <VerticalStackLayout Padding="10">
+        <Frame Padding="5"
+               Margin="5"
+               CornerRadius="15"
+               HasShadow="True"
+               BorderColor="LightGray"
+               BackgroundColor="White">
+            <Label Text="🐲 Dragon Ball Characters 🌍"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   TextColor="Black"
+                   Padding="10"/>
+        </Frame>
+
+        <!-- Menú -->
+        <HorizontalStackLayout HorizontalOptions="CenterAndExpand" Spacing="20" Padding="5">
+            <Button Text="🦸‍♂️ Personajes"
+                    Clicked="OnCharactersClicked"
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
+                    FontSize="16"
+                    CornerRadius="5"
+                    HeightRequest="70"
+                    WidthRequest="150"
+                    BorderColor="#388E3C"
+                    BorderWidth="2"/>
+
+            <Button Text="🌍 Planetas"
+                    Clicked="OnPlanetsClicked"
+                    BackgroundColor="#2196F3"
+                    TextColor="White"
+                    FontSize="16"
+                    CornerRadius="5"
+                    HeightRequest="60"
+                    WidthRequest="130"
+                    BorderColor="#1976D2"
+                    BorderWidth="2"/>
+        </HorizontalStackLayout>
+
+        <!-- Barra de búsqueda y botón limpiar -->
+        <HorizontalStackLayout HorizontalOptions="CenterAndExpand" Padding="1" Margin="20">
+            <SearchBar x:Name="searchBar"
+                       Placeholder="Buscar..."
+                       TextChanged="OnSearchTextChanged"
+                       WidthRequest="250"/>
+            <Button Text="CLEAR"
+                    Clicked="OnClearClicked"
+                    BackgroundColor="#fbc531"/>
+        </HorizontalStackLayout>
+
+        <!-- Lista de tarjetas -->
+        <CollectionView x:Name="collectionView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="10" Margin="5" BorderColor="LightGray" CornerRadius="10">
+                        <VerticalStackLayout>
+                            <Label Text="{Binding Name}" FontSize="35" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+                            <Image Source="{Binding Image}" HeightRequest="200" Aspect="AspectFit" HorizontalOptions="CenterAndExpand"/>
+                            <Label Text="{Binding Description}" FontSize="20" HorizontalTextAlignment="Center"/>
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>
+```
+
+### 3. Crear el Código Detrás de la Página (MainPage.xaml.cs):
+
+```cs
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.Maui.Controls;
+
+namespace DragonBallAppMaui
+{
+    public partial class MainPage : ContentPage
+    {
+        private DragonBallService _dragonBallService;
+        private List<Character> _allCharacters;
+        private List<Planet> _allPlanets;
+
+        public MainPage()
+        {
+            InitializeComponent();
+            _dragonBallService = new DragonBallService();
+            LoadCharacters();
+        }
+
+        private async Task LoadCharacters()
+        {
+            try
+            {
+                var characters = await _dragonBallService.GetCharactersAsync();
+                _allCharacters = characters;
+                collectionView.ItemsSource = characters;
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", $"No se pudo cargar la información: {ex.Message}", "OK");
+            }
+        }
+
+        private async void OnCharactersClicked(object sender, EventArgs e)
+        {
+            await LoadCharacters();
+        }
+
+        private async void OnPlanetsClicked(object sender, EventArgs e)
+        {
+            try
+            {
+                var planets = await _dragonBallService.GetPlanetsAsync();
+                _allPlanets = planets;
+                collectionView.ItemsSource = planets;
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", $"No se pudo cargar la información: {ex.Message}", "OK");
+            }
+        }
+
+        private void OnSearchTextChanged(object sender, TextChangedEventArgs e)
+        {
+            var searchText = e.NewTextValue.ToLower();
+
+            if (collectionView.ItemsSource is List<Character> characters)
+            {
+                collectionView.ItemsSource = _allCharacters.Where(c => c.Name.ToLower().Contains(searchText)).ToList();
+            }
+            else if (collectionView.ItemsSource is List<Planet> planets)
+            {
+                collectionView.ItemsSource = _allPlanets.Where(p => p.Name.ToLower().Contains(searchText)).ToList();
+            }
+        }
+
+        private void OnClearClicked(object sender, EventArgs e)
+        {
+            searchBar.Text = string.Empty;
+            if (collectionView.ItemsSource is List<Character>)
+            {
+                collectionView.ItemsSource = _allCharacters;
+            }
+            else if (collectionView.ItemsSource is List<Planet>)
+            {
+                collectionView.ItemsSource = _allPlanets;
+            }
+        }
+    }
+}
+
+```
+
+## 4. Crear el Servicio de Dragon Ball (DragonBallService.cs)
+
+```cs
+
+using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+
+namespace DragonBallAppMaui
+{
+    public class DragonBallService
+    {
+        private static readonly HttpClient client = new HttpClient();
+        private const string charactersUrl = "https://dragonball-api.com/api/characters?limit=1000";
+        private const string planetsUrl = "https://dragonball-api.com/api/planets?limit=1000";
+
+        public async Task<List<Character>> GetCharactersAsync()
+        {
+            try
+            {
+                var response = await client.GetStringAsync(charactersUrl);
+                var result = JsonConvert.DeserializeObject<ApiResponse<Character>>(response);
+                return result.Items;
+            }
+            catch (HttpRequestException e)
+            {
+                Console.WriteLine($"Request error: {e.Message}");
+                return new List<Character>();
+            }
+        }
+
+        public async Task<List<Planet>> GetPlanetsAsync()
+        {
+            try
+            {
+                var response = await client.GetStringAsync(planetsUrl);
+                var result = JsonConvert.DeserializeObject<ApiResponse<Planet>>(response);
+                return result.Items;
+            }
+            catch (HttpRequestException e)
+            {
+                Console.WriteLine($"Request error: {e.Message}");
+                return new List<Planet>();
+            }
+        }
+    }
+
+    public class ApiResponse<T>
+    {
+        public List<T> Items { get; set; }
+        public Meta Meta { get; set; }
+    }
+
+    public class Meta
+    {
+        public int TotalItems { get; set; }
+        public int ItemCount { get; set; }
+        public int ItemsPerPage { get; set; }
+        public int TotalPages { get; set; }
+        public int CurrentPage { get; set; }
+    }
+
+    public class Character
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string Image { get; set; }
+    }
+
+    public class Planet
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string Image { get; set; }
+    }
+}
+
+```
+
+
+
 ## Explicación de Archivos
 
 ### `MainPage.xaml`
